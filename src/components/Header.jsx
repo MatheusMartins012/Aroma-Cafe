@@ -6,7 +6,7 @@ import { IoCartOutline } from "react-icons/io5";
 
 function Header() {
   return (
-    <header className=" absolute z-10 w-full left-0 text-white/75 top-5">
+    <header className=" absolute z-10 w-full left-0 text-white/75 top-5 ">
       <div className='flex justify-between mx-auto max-w-7xl mt-4'>
         <div className='flex gap-4'>
           <PiCoffeeBold size={"35px"} className='text-[#B08968]' />
@@ -27,7 +27,7 @@ function Header() {
         <div className='flex items-center gap-5'>
           <CiSearch  size={"25px"}/>
           <IoCartOutline size={"25px"}/>
-          <button className='bg-[#6F4E37] rounded-full px-6 py-2 text-white border-none'>Faça seu pedido</button>
+          <button className='bg-[#6F4E37] rounded-full px-6 py-2 text-white border-none cursor-pointer' onClick={() => window.location.href = ''}>Faça seu pedido</button>
         </div>
       </div>
 
