@@ -1,5 +1,9 @@
-
 @import "tailwindcss";
+
+  @theme {
+  --font-geral: "Poppins", sans-serif;
+  --font-texto: "Playfair Display SC", sans-serif;
+}
 
 * {
   box-sizing: border-box;

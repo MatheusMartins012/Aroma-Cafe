@@ -6,13 +6,13 @@ import { IoCartOutline } from "react-icons/io5";
 
 function Header() {
   return (
-    <header className=" absolute z-10 w-full left-0 text-white/75 top-5 ">
+    <header className=" absolute z-10 w-full px-20 py-5  text-white/75 ">
       <div className='flex justify-between mx-auto max-w-7xl mt-4'>
         <div className='flex gap-4'>
           <PiCoffeeBold size={"35px"} className='text-[#B08968]' />
           <Link
             to="/" 
-            className='font-thin text-white text-3xl'>
+            className='font-texto text-white text-2xl'>
             aroma café
           </Link>
         </div>
