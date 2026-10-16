@@ -3,7 +3,7 @@ import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { MdOutlinePerson } from "react-icons/md";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom'
 import Destaques from '../components/Destaques';
 import AppMobile from "../components/AppMobile";
 
@@ -43,12 +43,12 @@ function Home() {
 
                     <div className="mt-10 flex gap-5">
 
-                        <button
-                            type="button"
-                            className="cursor-pointer rounded-3xl bg-[#905a34] px-15 py-4 font-semibold text-white transition-all duration-500 ease-in-out hover:scale-105 hover:bg-[#cd9e6a] hover:text-amber-900"
+                        <Link
+                            to="/cardapio"
+                            className="inline-block cursor-pointer rounded-3xl bg-[#905a34] px-15 py-4 font-semibold text-white transition-all duration-500 ease-in-out hover:scale-105 hover:bg-[#cd9e6a] hover:text-amber-900 text-center"
                         >
                             Ver cardápio
-                        </button>
+                        </Link>
 
                         <button
                             type="button"
@@ -142,7 +142,7 @@ function Home() {
                     </div>
 
                     <Link
-                        to="/"
+                        to="/cardapio"
                         className="flex shrink-0 items-center gap-2 text-tex text-[#99664f]"
                     >
                         Ver cardápio

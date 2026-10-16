@@ -1,24 +1,28 @@
 import { useState } from "react";
-// Importe o hook e as categorias do arquivo destaques
-import { destaques, CATEGORIAS } from "../data/destaques";
+// Importe diretamente do seu arquivo de dados (ajuste o caminho se necessário)
+import { produtosCardapio, CATEGORIAS } from "../data/menuItems";
 
 const formatarPreco = (valor) =>
   valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
 export default function Cardapio() {
-  // Chamando o hook para pegar os produtos e a função de carrinho
-  const { products: PRODUTOS, handleAddToCart } = destaques();
-
   const [categoriaAtiva, setCategoriaAtiva] = useState("Todos");
+  
+  // Estado opcional para o carrinho dentro do cardápio, caso queira gerenciar aqui
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+    alert(`Adicionado: ${product.nome || product.name}`);
+  };
 
   const produtosVisiveis =
     categoriaAtiva === "Todos"
-      ? PRODUTOS
-      : PRODUTOS.filter((p) => p.categoria === categoriaAtiva);
+      ? produtosCardapio
+      : produtosCardapio.filter((p) => p.categoria === categoriaAtiva);
 
   return (
-    <section className="mx-auto max-w-5xl rounded-2xl bg-[#faf6f1] p-6 shadow-lg">
-      {/* Abas de categoria */}
+    <section className="mx-auto max-w-7xl rounded-2xl bg-[#faf6f1] p-6 shadow-lg">
       <div className="flex flex-wrap gap-3" role="tablist" aria-label="Categorias">
         {CATEGORIAS.map((categoria) => {
           const ativa = categoria === categoriaAtiva;
@@ -57,18 +61,21 @@ export default function Cardapio() {
         {produtosVisiveis.map((product) => (
           <li
             key={product.id}
-            className="flex flex-col rounded-xl border border-[#eadfd2] bg-white p-2"
+            className="flex flex-col rounded-xl border border-[#eadfd2] bg-white p-2 shadow-sm"
           >
             <img
               src={product.image}
-              alt={product.name}
+              alt={product.nome || product.name}
               className="aspect-4/3 w-full rounded-lg object-cover"
             />
             <h3 className="mt-3 px-1 text-sm font-semibold text-[#2b1d14]">
-              {product.nome}
+              {product.nome || product.name}
             </h3>
             <p className="px-1 text-xs font-medium text-[#6f5a4a]">
-              {formatarPreco(product.preco)}
+              {/* Se o preço no array for número, usa a função. Se for string ("R$ 8,90"), exibe direto */}
+              {typeof product.preco === 'number' 
+                ? formatarPreco(product.preco) 
+                : product.price}
             </p>
             <button
               onClick={() => handleAddToCart(product)}

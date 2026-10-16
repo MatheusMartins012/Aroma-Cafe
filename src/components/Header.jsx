@@ -33,9 +33,9 @@ function Header() {
         <div className='flex items-center gap-5'>
           <CiSearch size={"25px"} className='cursor-pointer hover:text-[#B08968]' />
           <IoCartOutline size={"25px"} className='cursor-pointer hover:text-[#B08968]' />
-          <button className='bg-[#915831] hover:bg-[#7a4928] rounded-full px-6 py-2 text-white border-none cursor-pointer transition-colors'>
+          <Link to='/cardapio' className='bg-[#915831] hover:bg-[#7a4928] rounded-full px-6 py-2 text-white border-none cursor-pointer transition-colors'>
             Faça seu pedido
-          </button>
+          </Link>
         </div>
       </div>
     </header>

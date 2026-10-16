@@ -1,9 +1,5 @@
 import { useState } from 'react';
 
-// 1. Exportando as categorias explicitamente logo no início
-export const CATEGORIAS = ["Todos", "Cafés", "Doces", "Salgados", "Bebidas"];
-
-// Importando as imagens
 import espressoImg from '/img/Café-expresso-1.jpg';
 import cappuccinoImg from '/img/capuccino.jpg';
 import latteImg from '/img/latte.jpg';
