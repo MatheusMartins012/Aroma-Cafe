@@ -19,7 +19,7 @@ function Cardapio() {
                 </div>
 
             </div>
-
+                <Menu />
     
         </div>
     )

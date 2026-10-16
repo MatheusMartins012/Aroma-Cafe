@@ -54,24 +54,24 @@ export default function Cardapio() {
 
       {/* Grade de produtos */}
       <ul className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {produtosVisiveis.map((produto) => (
+        {produtosVisiveis.map((product) => (
           <li
-            key={produto.id}
+            key={product.id}
             className="flex flex-col rounded-xl border border-[#eadfd2] bg-white p-2"
           >
             <img
-              src={produto.imagem}
-              alt={produto.nome}
-              className="aspect-[4/3] w-full rounded-lg object-cover"
+              src={product.image}
+              alt={product.name}
+              className="aspect-4/3 w-full rounded-lg object-cover"
             />
             <h3 className="mt-3 px-1 text-sm font-semibold text-[#2b1d14]">
-              {produto.nome}
+              {product.nome}
             </h3>
             <p className="px-1 text-xs font-medium text-[#6f5a4a]">
-              {formatarPreco(produto.preco)}
+              {formatarPreco(product.preco)}
             </p>
             <button
-              onClick={() => handleAddToCart(produto)}
+              onClick={() => handleAddToCart(product)}
               className="mt-3 rounded-full bg-[#9a5b34] py-2 text-xs font-medium text-white
                 transition-colors hover:bg-[#82492a]
                 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9a5b34] focus-visible:ring-offset-2"
