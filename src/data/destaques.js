@@ -1,10 +1,14 @@
 import { useState } from 'react';
 
-// Correção: remover o '/public' do início, pois o Vite já enxerga a pasta public automaticamente
+// 1. Exportando as categorias explicitamente logo no início
+export const CATEGORIAS = ["Todos", "Cafés", "Doces", "Salgados", "Bebidas"];
+
+// Importando as imagens
 import espressoImg from '/img/Café-expresso-1.jpg';
 import cappuccinoImg from '/img/capuccino.jpg';
 import latteImg from '/img/latte.jpg';
-import brownieImg from '/img/brownie.jpg'; // Corrigido de brownieImgImg para brownieImg
+import brownieImg from '/img/brownie.jpg'; 
+
 
 export function destaques() {
     const [cart, setCart] = useState([]);
@@ -13,36 +17,49 @@ export function destaques() {
         {
             id: 1,
             name: "Café Espresso",
+            nome: "Café Espresso",
             description: "Intenso e encorpado",
             price: "R$ 8,90",
-            image: espressoImg,
+            preco: 8.90,
+            categoria: "Cafés",
+            image: espressoImg
         },
         {
             id: 2,
             name: "Cappuccino",
+            nome: "Cappuccino",
             description: "Cremoso e na medida",
             price: "R$ 12,90",
-            image: cappuccinoImg,
+            preco: 12.90,
+            categoria: "Cafés",
+            image: cappuccinoImg
         },
         {
             id: 3,
             name: "Latte",
+            nome: "Latte gelado",
             description: "Suave e delicioso",
             price: "R$ 14,90",
-            image: latteImg,
+            preco: 14.90,
+            categoria: "Bebidas",
+            image: latteImg
         },
         {
             id: 4,
             name: "Brownie",
-            description: "a combinação perfeita",
+            nome: "Brownie",
+            description: "A combinação perfeita",
             price: "R$ 12,90",
-            image: brownieImg, // Usando a variável correta agora
-        }
+            preco: 12.90,
+            categoria: "Doces",
+            image: brownieImg
+        },
+    
     ];
 
     const handleAddToCart = (product) => {
         setCart((prevCart) => [...prevCart, product]);
-        alert(`Adicionado: ${product.name}`);
+        alert(`Adicionado: ${product.name || product.nome}`);
     };
 
     return {

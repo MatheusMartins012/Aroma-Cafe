@@ -5,6 +5,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 
 import { Link } from "react-router-dom";
 import Destaques from '../components/Destaques';
+import AppMobile from "../components/AppMobile";
 
 function Home() {
     return (
@@ -60,7 +61,6 @@ function Home() {
                 </div>
             </section>
 
-            {/* DIFERENCIAIS DA CAFETERIA */}
             <section className="flex min-h-[12vh] w-full items-center bg-[#1c1510] py-6 text-white">
 
                 <div className="mx-auto flex w-full  items-center justify-between gap-8 px-20">
@@ -127,7 +127,7 @@ function Home() {
 
                 </div>
             </section>
-            <section className="w-full bg-white px-20 py-20 text-[#1c1510]">
+            <section className="w-full bg-white px-20 pt-20 pb-10 text-[#1c1510]">
 
                 <div className="mx-auto flex items-center justify-between gap-6">
 
@@ -153,6 +153,10 @@ function Home() {
                 <div>
                     <Destaques />
                 </div>
+            </section>
+
+            <section>
+                <AppMobile />
             </section>
 
         </div>
