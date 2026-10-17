@@ -33,7 +33,7 @@ export default function Cardapio() {
               aria-selected={ativa}
               onClick={() => setCategoriaAtiva(categoria)}
               className={`rounded-xl px-6 py-2 text-sm font-medium transition-colors
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9a5b34]
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9a5b34] cursor-pointer
                 ${
                   ativa
                     ? "bg-[#9a5b34] text-white"
