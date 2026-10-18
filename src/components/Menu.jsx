@@ -81,7 +81,7 @@ export default function Cardapio() {
               onClick={() => handleAddToCart(product)}
               className="mt-3 rounded-full bg-[#9a5b34] py-2 text-xs font-medium text-white
                 transition-colors hover:bg-[#82492a]
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9a5b34] focus-visible:ring-offset-2"
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9a5b34] focus-visible:ring-offset-2 cursor-pointer"
             >
               Adicionar
             </button>
