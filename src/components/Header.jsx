@@ -26,7 +26,7 @@ function Header() {
         <nav className='flex items-center gap-15'>
           <Link to="/" className='text-white/70 no-underline hover:underline decoration-transparent hover:decoration-[#6F4E37] decoration-2 underline-offset-15 transition-colors duration-300 ease-in-out'>Início</Link>
           <Link to="/cardapio" className='text-white/70 no-underline hover:underline decoration-transparent hover:decoration-[#6F4E37] decoration-2 underline-offset-15 transition-colors duration-300 ease-in-out'>Cardapio</Link>
-          <Link to="/" className='text-white/70 no-underline hover:underline decoration-transparent hover:decoration-[#6F4E37] decoration-2 underline-offset-15 transition-colors duration-300 ease-in-out'>Sobre nós</Link>
+          <Link to="/sobre" className='text-white/70 no-underline hover:underline decoration-transparent hover:decoration-[#6F4E37] decoration-2 underline-offset-15 transition-colors duration-300 ease-in-out'>Sobre nós</Link>
           <Link to="/contato" className='text-white/70 no-underline hover:underline decoration-transparent hover:decoration-[#6F4E37] decoration-2 underline-offset-15 transition-colors duration-300 ease-in-out'>Contato</Link>
         </nav>
 

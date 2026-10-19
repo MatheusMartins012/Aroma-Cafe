@@ -43,7 +43,7 @@ function Footer() {
                     <p className='mb-5 text-[#c7b59e]'>Contato</p>
                     <div className='flex gap-3.5 items-center'>
                         <BsTelephone className='text-[#c7b59e]' size={20} />
-                        <p className='text-[#9E9990] text-sm'>(88) 9-994372201</p>
+                        <p className='text-[#9E9990] text-sm'>(88) 9-94372201</p>
                     </div>
                     <div className='flex gap-3.5 items-center'>
                         <MdOutlineEmail className='text-[#c7b59e]' size={20} />

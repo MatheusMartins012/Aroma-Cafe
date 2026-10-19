@@ -50,12 +50,12 @@ function Home() {
                             Ver cardápio
                         </Link>
 
-                        <button
-                            type="button"
-                            className="cursor-pointer rounded-full border border-[#905a34] px-15 text-amber-50 transition-all duration-500 ease-in-out hover:scale-105 hover:bg-amber-50 hover:text-amber-900"
-                        >
-                            Conheça nossa história
-                        </button>
+                        <Link 
+                        to='/sobre'
+                        className="cursor-pointer  rounded-full border border-[#905a34] px-15 py-4 text-amber-50 
+                        transition-all duration-500 ease-in-out hover:scale-105 hover:bg-amber-50 hover:text-amber-900">
+                        Conheça nossa História
+                        </Link>
 
                     </div>
                 </div>
