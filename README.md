@@ -54,13 +54,13 @@ O projeto faz parte do meu portfólio de estudos e demonstra a aplicação prát
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/MatheusMartins012/Aroma-Cafe-.git
+   [git clone https://github.com/MatheusMartins012/Aroma-Cafe.git](https://github.com/MatheusMartins012/Aroma-Cafe.git)
    ```
 
 2. Acesse a pasta do projeto:
 
    ```bash
-   cd Aroma-Caf-
+   cd Aroma-Cafe
    ```
 
 3. Instale as dependências:
