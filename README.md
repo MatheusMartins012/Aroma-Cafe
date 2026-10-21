@@ -1,16 +1,89 @@
-# React + Vite
+# ☕ Aroma Café
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+### E-commerce de cafeteria desenvolvido com React
 
-Currently, two official plugins are available:
+O **Aroma Café** é um projeto de e-commerce para uma cafeteria, desenvolvido com foco em uma interface moderna, navegação intuitiva e uma experiência de compra agradável. O projeto faz parte dos meus estudos em desenvolvimento Front-end e do meu portfólio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 Sobre o projeto
 
-## React Compiler
+A aplicação apresenta uma cafeteria fictícia, com páginas para conhecer a marca, explorar o cardápio e interagir com os produtos disponíveis.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O objetivo é aplicar na prática conceitos de desenvolvimento web, componentização, navegação entre páginas, gerenciamento de estado e estilização responsiva.
 
-## Expanding the Oxlint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Página inicial com apresentação da cafeteria.
+- Página sobre a marca.
+- Cardápio com produtos e categorias.
+- Seção de produtos em destaque.
+- Carrinho de compras interativo.
+- Adição e remoção de produtos do carrinho.
+- Controle de quantidades e cálculo do valor total.
+- Pesquisa de produtos.
+- Página de login.
+- Página de contato e localização.
+- Página sobre a empresa
+
+## 🛠️ Tecnologias utilizadas
+
+- **React** — construção da interface por componentes.
+- **JavaScript** — lógica e interatividade.
+- **Vite** — ambiente de desenvolvimento e build.
+- **Tailwind CSS** — estilização da aplicação.
+- **React Router** — navegação entre páginas.
+
+## 🚀 Como executar o projeto
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/)
+- npm, instalado junto com o Node.js.
+
+### Instalação
+
+1. Clone este repositório:
+
+   ```bash
+   [git clone URL_DO_REPOSITORIO](https://github.com/MatheusMartins012/Aroma-Cafe.git)
+   ```
+
+2. Entre na pasta do projeto:
+
+   ```bash
+   cd Aroma-café
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse no navegador o endereço local exibido pelo terminal.
+
+## 📚 Aprendizados
+
+Este projeto contribui para o desenvolvimento de conhecimentos em:
+
+- Criação e reutilização de componentes React.
+- Organização de páginas e rotas.
+- Estilização com Tailwind CSS.
+- Gerenciamento de estado e interação com o carrinho.
+- Organização de um projeto Front-end.
+- Experiência do usuário e design responsivo.
+
+## 👨‍💻 Autor
+
+**Matheus Martins**
+
+Desenvolvedor Front-end em formação, estudando React, JavaScript e desenvolvimento de interfaces web.
+
+---
+
+⭐ Obrigado por conhecer o Aroma Café!
