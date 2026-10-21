@@ -10,11 +10,10 @@ import { CiLocationOn } from "react-icons/ci";
 
 function Footer() {
     return (
-        <footer className="flex flex-col justify-between w-full mx-auto px-15 pt-15 bg-[#0F0F10] text-white">
-            
-            {/* Bloco superior com as 3 colunas */}
-            <div className="flex justify-between w-full pb-12">
-                <div className="flex flex-col gap-6">
+        <footer className="flex flex-col justify-between w-full mx-auto px-6 pt-10 md:px-10 lg:px-15 lg:pt-15 bg-[#0F0F10] text-white">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full pb-12">
+                <div className="flex flex-col gap-6 sm:col-span-2 lg:col-span-1">
                     <div className='flex gap-2 items-center'>
                         <PiCoffeeBold size={"40"} className='text-[#c7b59e]' />
                         <p className="text-2xl">Aroma café</p>
@@ -42,24 +41,24 @@ function Footer() {
                 <div className='flex flex-col gap-3'>
                     <p className='mb-5 text-[#c7b59e]'>Contato</p>
                     <div className='flex gap-3.5 items-center'>
-                        <BsTelephone className='text-[#c7b59e]' size={20} />
+                        <BsTelephone className='text-[#c7b59e] shrink-0' size={20} />
                         <p className='text-[#9E9990] text-sm'>(88) 9-94372201</p>
                     </div>
                     <div className='flex gap-3.5 items-center'>
-                        <MdOutlineEmail className='text-[#c7b59e]' size={20} />
-                        <p className='text-[#9E9990] text-sm'>fmatheus.martins1107@gmail.com</p>
+                        <MdOutlineEmail className='text-[#c7b59e] shrink-0' size={20} />
+                        <p className='text-[#9E9990] text-sm break-all'>fmatheus.martins1107@gmail.com</p>
                     </div>
                     <div className='flex gap-3.5 items-center'>
-                        <CiLocationOn className='text-[#c7b59e]' size={20} />
+                        <CiLocationOn className='text-[#c7b59e] shrink-0' size={20} />
                         <p className='text-[#9E9990] text-sm'>Centro, 1000 - Forquilha/CE</p>
                     </div>
                 </div>
             </div>
 
             {/* Nova div inferior com borda superior e links de políticas/ano */}
-            <div className="flex justify-between items-center w-full py-6 border-t border-[#c7b59e]/30 text-sm text-[#9E9990]">
+            <div className="flex flex-col items-center gap-4 text-center md:flex-row md:justify-between md:text-left w-full py-6 border-t border-[#c7b59e]/30 text-sm text-[#9E9990]">
                 <p>&copy; {new Date().getFullYear()} Aroma Café. Todos os direitos reservados.</p>
-                <div className="flex gap-6">
+                <div className="flex flex-wrap justify-center gap-y-2 gap-x-6">
                     <Link to="/privacidade" className="hover:text-white transition-colors border-r pr-5">Política de Privacidade</Link>
                     <Link to="/termos" className="hover:text-white transition-colors">Termos de Uso</Link>
                 </div>
