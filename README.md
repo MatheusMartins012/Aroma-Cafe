@@ -31,15 +31,15 @@ O projeto faz parte do meu portfólio de estudos e demonstra a aplicação prát
 
 ### Página inicial
 
-![Página inicial do Aroma Café](screenshots/home.png)
+![Página inicial do Aroma Café](home.png)
 
 ### Cardápio
 
-![Cardápio do Aroma Café](screenshots/cardápio.png)
+![Cardápio do Aroma Café](cardápio.png)
 
 ### Carrinho de compras
 
-![Carrinho de compras do Aroma Café](screenshots/carrinho.png)
+![Carrinho de compras do Aroma Café](carrinho.png)
 
 ## 🚀 Como executar o projeto
 
