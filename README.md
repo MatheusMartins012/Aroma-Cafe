@@ -29,7 +29,17 @@ O projeto faz parte do meu portfólio de estudos e demonstra a aplicação prát
 
 ## 📸 Capturas de tela
 
-As capturas de tela do projeto serão adicionadas aqui para apresentar visualmente as principais páginas e funcionalidades do Aroma Café.
+### Página inicial
+
+![Página inicial do Aroma Café](screenshots/home.png)
+
+### Cardápio
+
+![Cardápio do Aroma Café](screenshots/cardápio.png)
+
+### Carrinho de compras
+
+![Carrinho de compras do Aroma Café](screenshots/carrinho.png)
 
 ## 🚀 Como executar o projeto
 
