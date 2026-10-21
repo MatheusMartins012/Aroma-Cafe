@@ -1,39 +1,51 @@
+
 import { useState } from "react";
-// Importe diretamente do seu arquivo de dados (ajuste o caminho se necessário)
 import { produtosCardapio, CATEGORIAS } from "../data/menuItems";
+import { useCarrinho } from "../context/CarrinhoContext";
 
 const formatarPreco = (valor) =>
-  valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+  valor.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 
-export default function Cardapio() {
+export default function Menu() {
   const [categoriaAtiva, setCategoriaAtiva] = useState("Todos");
-  
-  // Estado opcional para o carrinho dentro do cardápio, caso queira gerenciar aqui
-  const [cart, setCart] = useState([]);
 
-  const handleAddToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
-    alert(`Adicionado: ${product.nome || product.name}`);
-  };
+  const { adicionarAoCarrinho } = useCarrinho();
+
+  function handleAddToCart(product) {
+    adicionarAoCarrinho(product);
+  }
 
   const produtosVisiveis =
     categoriaAtiva === "Todos"
       ? produtosCardapio
-      : produtosCardapio.filter((p) => p.categoria === categoriaAtiva);
+      : produtosCardapio.filter(
+          (produto) => produto.categoria === categoriaAtiva
+        );
 
   return (
     <section className="mx-auto max-w-7xl rounded-2xl bg-[#faf6f1] p-6 shadow-lg">
-      <div className="flex flex-wrap gap-3" role="tablist" aria-label="Categorias">
+      {/* Categorias */}
+      <div
+        className="flex flex-wrap gap-3"
+        role="tablist"
+        aria-label="Categorias"
+      >
         {CATEGORIAS.map((categoria) => {
           const ativa = categoria === categoriaAtiva;
+
           return (
             <button
               key={categoria}
+              type="button"
               role="tab"
               aria-selected={ativa}
               onClick={() => setCategoriaAtiva(categoria)}
-              className={`rounded-xl px-6 py-2 text-sm font-medium transition-colors
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9a5b34] cursor-pointer
+              className={`cursor-pointer rounded-xl px-6 py-2 text-sm font-medium
+                transition-colors focus:outline-none
+                focus-visible:ring-2 focus-visible:ring-[#9a5b34]
                 ${
                   ativa
                     ? "bg-[#9a5b34] text-white"
@@ -48,45 +60,65 @@ export default function Cardapio() {
 
       <hr className="my-6 border-[#eadfd2]" />
 
+      {/* Título */}
       <h2 className="font-serif text-2xl font-semibold text-[#2b1d14]">
-        {categoriaAtiva === "Todos" ? "Cardápio completo" : categoriaAtiva}
+        {categoriaAtiva === "Todos"
+          ? "Cardápio completo"
+          : categoriaAtiva}
       </h2>
+
       <p className="mt-1 text-sm text-[#6f5a4a]">
         {produtosVisiveis.length}{" "}
-        {produtosVisiveis.length === 1 ? "opção disponível" : "opções disponíveis"}
+        {produtosVisiveis.length === 1
+          ? "opção disponível"
+          : "opções disponíveis"}
       </p>
 
-      {/* Grade de produtos */}
+      {/* Produtos */}
       <ul className="mt-5 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {produtosVisiveis.map((product) => (
-          <li
-            key={product.id}
-            className="flex flex-col rounded-xl border border-[#eadfd2] bg-white p-2 shadow-sm"
-          >
-            <img
-              src={product.image}
-              alt={product.nome || product.name}
-              className="aspect-4/3 w-full rounded-lg object-cover"
-            />
-            <h3 className="mt-3 px-1 text-sm font-semibold text-[#2b1d14]">
-              {product.nome || product.name}
-            </h3>
-            <p className="px-1 text-xs font-medium text-[#6f5a4a]">
-              {/* Se o preço no array for número, usa a função. Se for string ("R$ 8,90"), exibe direto */}
-              {typeof product.preco === 'number' 
-                ? formatarPreco(product.preco) 
-                : product.price}
-            </p>
-            <button
-              onClick={() => handleAddToCart(product)}
-              className="mt-3 rounded-full bg-[#9a5b34] py-2 text-xs font-medium text-white
-                transition-colors hover:bg-[#82492a]
-                focus:outline-none focus-visible:ring-2 focus-visible:ring-[#9a5b34] focus-visible:ring-offset-2 cursor-pointer"
+        {produtosVisiveis.map((product) => {
+          const nomeProduto = product.nome || product.name;
+
+          const precoProduto =
+            typeof product.preco === "number"
+              ? formatarPreco(product.preco)
+              : product.preco ?? product.price;
+
+          return (
+            <li
+              key={product.id}
+              className="flex flex-col rounded-xl border border-[#eadfd2]
+                bg-white p-2 shadow-sm transition-shadow hover:shadow-md"
             >
-              Adicionar
-            </button>
-          </li>
-        ))}
+              <img
+                src={product.image}
+                alt={nomeProduto}
+                className="aspect-[4/3] w-full rounded-lg object-cover"
+              />
+
+              <h3 className="mt-3 px-1 text-sm font-semibold text-[#2b1d14]">
+                {nomeProduto}
+              </h3>
+
+              <p className="px-1 text-xs font-medium text-[#6f5a4a]">
+                {precoProduto}
+              </p>
+
+              {/* Adicionar ao carrinho */}
+              <button
+                type="button"
+                onClick={() => handleAddToCart(product)}
+                className="mt-3 cursor-pointer rounded-full bg-[#9a5b34]
+                  py-2 text-xs font-medium text-white transition-colors
+                  duration-300 hover:bg-[#82492a]
+                  focus:outline-none focus-visible:ring-2
+                  focus-visible:ring-[#9a5b34] focus-visible:ring-offset-2"
+              >
+                Adicionar
+              </button>
+            </li>
+          );
+        })}
       </ul>
 
       {produtosVisiveis.length === 0 && (

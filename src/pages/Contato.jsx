@@ -23,7 +23,7 @@ function Contato() {
             <div className="flex py-20 px-20 gap-15">
                 <div className="flex flex-1 flex-col w-full h-100 gap-5">
                     <div className="flex flex-col gap-5">
-                        <h1 className=" text-4xl font-medium font-texto">Fale conosco</h1>
+                        <h1 className=" text-4xl font-medium">Fale conosco</h1>
                         <p className="text-black/70 mb-6">Tire suas dúvidas, envie sugestões ou venha <br /> nos fazer uma visita, estamos sempre disponíveis.</p>
                     </div>
 

@@ -1,19 +1,15 @@
 # ☕ Aroma Café
 
-### E-commerce de cafeteria desenvolvido com React
+### E-commerce e experiência digital para uma cafeteria
 
-O **Aroma Café** é um projeto de e-commerce para uma cafeteria, desenvolvido com foco em uma interface moderna, navegação intuitiva e uma experiência de compra agradável. O projeto faz parte dos meus estudos em desenvolvimento Front-end e do meu portfólio.
+O **Aroma Café** é um projeto de desenvolvimento web criado para praticar e aprimorar conhecimentos em Front-end. A aplicação apresenta a identidade visual de uma cafeteria por meio de uma interface moderna, acolhedora e intuitiva.
 
-## 📸 Sobre o projeto
-
-A aplicação apresenta uma cafeteria fictícia, com páginas para conhecer a marca, explorar o cardápio e interagir com os produtos disponíveis.
-
-O objetivo é aplicar na prática conceitos de desenvolvimento web, componentização, navegação entre páginas, gerenciamento de estado e estilização responsiva.
+O projeto faz parte do meu portfólio de estudos e demonstra a aplicação prática de React, JavaScript, organização de componentes, navegação entre páginas e estilização com Tailwind CSS.
 
 ## ✨ Funcionalidades
 
 - Página inicial com apresentação da cafeteria.
-- Página sobre a marca.
+- Página institucional sobre a marca.
 - Cardápio com produtos e categorias.
 - Seção de produtos em destaque.
 - Carrinho de compras interativo.
@@ -21,36 +17,40 @@ O objetivo é aplicar na prática conceitos de desenvolvimento web, componentiza
 - Controle de quantidades e cálculo do valor total.
 - Pesquisa de produtos.
 - Página de login.
-- Página de contato e localização.
-- Página sobre a empresa
+- Páginas de contato e localização.
 
 ## 🛠️ Tecnologias utilizadas
 
-- **React** — construção da interface por componentes.
+- **React** — construção de interfaces por componentes.
 - **JavaScript** — lógica e interatividade.
-- **Vite** — ambiente de desenvolvimento e build.
-- **Tailwind CSS** — estilização da aplicação.
+- **Vite** — ambiente de desenvolvimento e ferramenta de build.
+- **Tailwind CSS** — estilização da interface.
 - **React Router** — navegação entre páginas.
+
+## 📸 Capturas de tela
+
+As capturas de tela do projeto serão adicionadas aqui para apresentar visualmente as principais páginas e funcionalidades do Aroma Café.
 
 ## 🚀 Como executar o projeto
 
 ### Pré-requisitos
 
 - [Node.js](https://nodejs.org/)
-- npm, instalado junto com o Node.js.
+- npm
+- Git
 
 ### Instalação
 
-1. Clone este repositório:
+1. Clone o repositório:
 
    ```bash
-   [git clone URL_DO_REPOSITORIO](https://github.com/MatheusMartins012/Aroma-Cafe.git)
+   git clone https://github.com/MatheusMartins012/Aroma-Cafe-.git
    ```
 
-2. Entre na pasta do projeto:
+2. Acesse a pasta do projeto:
 
    ```bash
-   cd Aroma-café
+   cd Aroma-Caf-
    ```
 
 3. Instale as dependências:
@@ -65,25 +65,27 @@ O objetivo é aplicar na prática conceitos de desenvolvimento web, componentiza
    npm run dev
    ```
 
-5. Acesse no navegador o endereço local exibido pelo terminal.
+5. Abra no navegador o endereço local informado pelo terminal.
 
 ## 📚 Aprendizados
 
-Este projeto contribui para o desenvolvimento de conhecimentos em:
+Durante o desenvolvimento deste projeto, são praticados conceitos como:
 
 - Criação e reutilização de componentes React.
 - Organização de páginas e rotas.
-- Estilização com Tailwind CSS.
+- Estilização de interfaces com Tailwind CSS.
 - Gerenciamento de estado e interação com o carrinho.
+- Construção de interfaces responsivas.
 - Organização de um projeto Front-end.
-- Experiência do usuário e design responsivo.
 
 ## 👨‍💻 Autor
 
 **Matheus Martins**
 
-Desenvolvedor Front-end em formação, estudando React, JavaScript e desenvolvimento de interfaces web.
+Desenvolvedor Front-end em formação, com foco em React, JavaScript e desenvolvimento de interfaces web.
+
+- GitHub: [MatheusMartins012](https://github.com/MatheusMartins012)
 
 ---
 
-⭐ Obrigado por conhecer o Aroma Café!
+*Projeto desenvolvido para fins de estudo e portfólio profissional.*
