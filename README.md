@@ -6,6 +6,19 @@ O **Aroma Café** é um projeto de desenvolvimento web criado para praticar e ap
 
 O projeto faz parte do meu portfólio de estudos e demonstra a aplicação prática de React, JavaScript, organização de componentes, navegação entre páginas e estilização com Tailwind CSS.
 
+## ℹ️ Escopo do projeto
+
+O Aroma Café é um projeto de estudo focado exclusivamente no desenvolvimento Front-end.
+
+- **Dados mockados:** os produtos e demais informações exibidas são dados de exemplo.
+- **Sem Back-end:** o projeto não possui servidor ou lógica de back-end própria.
+- **Sem API:** não realiza integração com APIs externas.
+- **Sem banco de dados:** não possui banco de dados para armazenamento persistente.
+
+O objetivo é praticar a construção de interfaces, componentes reutilizáveis, navegação entre páginas, estilização responsiva e interações com React.
+
+**Observação:** as funcionalidades demonstradas são voltadas à experiência visual e à interação no Front-end, não representando um sistema de e-commerce completo em produção.
+
 ## ✨ Funcionalidades
 
 - Página inicial com apresentação da cafeteria.
@@ -87,19 +100,6 @@ Durante o desenvolvimento deste projeto, são praticados conceitos como:
 - Gerenciamento de estado e interação com o carrinho.
 - Construção de interfaces responsivas.
 - Organização de um projeto Front-end.
-
-## ℹ️ Escopo do projeto
-
-O Aroma Café é um projeto de estudo focado exclusivamente no desenvolvimento Front-end.
-
-- **Dados mockados:** os produtos e demais informações exibidas são dados de exemplo.
-- **Sem Back-end:** o projeto não possui servidor ou lógica de back-end própria.
-- **Sem API:** não realiza integração com APIs externas.
-- **Sem banco de dados:** não possui banco de dados para armazenamento persistente.
-
-O objetivo é praticar a construção de interfaces, componentes reutilizáveis, navegação entre páginas, estilização responsiva e interações com React.
-
-**Observação:** as funcionalidades demonstradas são voltadas à experiência visual e à interação no Front-end, não representando um sistema de e-commerce completo em produção.
 
 ## 👨‍💻 Autor
 
